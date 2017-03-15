@@ -13,6 +13,7 @@ import { OAuthModule } from 'angular-oauth2-oidc';
 import { PassengerModule } from './passenger/passenger.module';
 import { CoreModule } from './core/core.module';
 import { FlightBookingModule } from './flight-booking/flight-booking.module';
+import {APP_ROUTES_MODULE_PROVIDER} from './app.routes';
 
 export function createLoader(http: Http) {
     return new TranslateStaticLoader(http, './i18n', '.json');
@@ -42,7 +43,8 @@ export function createLoader(http: Http) {
         FlightHistoryComponent
     ],
     providers: [
-        {provide: BASE_URL, useValue: 'http://www.angular.at'}
+        {provide: BASE_URL, useValue: 'http://www.angular.at'},
+        APP_ROUTES_MODULE_PROVIDER
     ],
     bootstrap: [
         AppComponent
