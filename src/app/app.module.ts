@@ -34,7 +34,7 @@ export function createLoader(http: Http) {
             deps: [Http]
         }),
         // FlightBookingModule, // <-- Would prevent lazy loading
-        PassengerModule
+       // PassengerModule
     ],
     declarations: [
         AppComponent,

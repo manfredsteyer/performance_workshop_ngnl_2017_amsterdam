@@ -1,5 +1,7 @@
 import { CustomPreloadingStrategy } from './shared/preload/custom-preloading.strategy';
 import { FlightBookingComponent } from './flight-booking/flight-booking.component';
+import { PassengerComponent } from './passenger/passenger.component';
+
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FlightHistoryComponent } from './flight-history/flight-history.component';
@@ -22,6 +24,11 @@ let APP_ROUTES: Routes = [
         data: {
             preload: false
         }
+    },
+    {
+        path: 'passenger',
+        loadChildren: './passenger/passenger.module#PassengerModule',
+        // component: PassengerComponent,
     },
     {
         path: 'history',
