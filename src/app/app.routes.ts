@@ -29,6 +29,9 @@ let APP_ROUTES: Routes = [
         path: 'passenger',
         loadChildren: './passenger/passenger.module#PassengerModule',
         // component: PassengerComponent,
+        data: {
+            preload: false
+        }
     },
     {
         path: 'history',
