@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+         // exclude .js and .js.map files, when in a TypeScript project
+        "**/*.js": { "when": "$(basename).ts"},
+        "**/*.js.map": true
+    },
+
+    "search.exclude": {
+        // excludes dist_sw and out-tsc folder from search        
+        "dist_sw": true,
+        "out-tsc": true
+    }
+}

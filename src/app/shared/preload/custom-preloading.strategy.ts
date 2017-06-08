@@ -5,12 +5,12 @@ import { Observable } from 'rxjs/Observable';
 export class CustomPreloadingStrategy implements PreloadingStrategy {
 
     preload(route: Route, fn: () => Observable<any>): Observable<any> {
-         //return Observable.of(true).delay(7000).flatMap(_ => fn());
+         return Observable.of(true).delay(7000).flatMap(_ => fn());
 
-        if (route.data['preload']) {
+       /* if (route.data['preload']) {
             return fn();
         }
-        return Observable.of(false);
+        return Observable.of(false);*/
     }
 
 }

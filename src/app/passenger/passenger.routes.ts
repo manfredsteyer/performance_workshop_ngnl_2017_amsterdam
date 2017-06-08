@@ -7,7 +7,7 @@ import { LeaveComponentGuard } from '../shared/deactivation/leave-component-guar
 
 let FLIGHT_BOOKING_ROUTES: Routes = [
     {
-        path: 'passenger',
+        path: '',
         component: PassengerComponent,
         // canActivateChild: [AuthChildGuard],
         children: [
